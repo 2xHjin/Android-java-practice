@@ -1,9 +1,15 @@
 package com.example.part4_12;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+/*
+* 스타일이 테마파일로 바뀌고 */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -11,6 +17,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // ActionBar actionBar
+       ActionBar actionBar=getSupportActionBar();
+       actionBar.setDisplayShowHomeEnabled(true); //홈 아이콘 표시 설정
+       actionBar.setDisplayHomeAsUpEnabled(true);//<- 업버튼 나타나게
+       actionBar.setIcon(R.drawable.icon);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==android.R.id.home){
+            Toast t=Toast.makeText(this,"HOME AS UP Click",Toast.LENGTH_SHORT);
+            t.show();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

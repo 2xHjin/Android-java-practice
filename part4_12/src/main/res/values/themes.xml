@@ -13,7 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="MainTheme.AndroidLab" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="MainTheme.AndroidLab" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#00000000</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -24,7 +24,8 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <item name="windowActionBarOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item><!--콘텐트 영역 위에 표시, 액션바의 색상값 떄문에 콘텐트 일부분 가려지므로 이때는
+        colorPrimary 속성값 투명하게 지정-->
         <!-- Customize your theme here. -->
     </style>
 </resources>
